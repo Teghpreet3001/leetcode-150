@@ -18,10 +18,10 @@ class Solution(object):
             if not self.isValid(row):
                 return False
         
-        for i in range(len(board)):
+        for i in range(9):
             row = board[i]
             col = []
-            for j in range(len(row)):
+            for j in range(9):
                 cell = board[j][i]
                 col.append(cell)
             if not self.isValid(col):
