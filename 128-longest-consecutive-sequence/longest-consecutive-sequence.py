@@ -4,7 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums.sort()
         numSet = set(nums)
         result = 0
 
