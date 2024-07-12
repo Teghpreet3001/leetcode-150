@@ -17,8 +17,6 @@ class Solution(object):
             result = max(result, area)
             if heights[left] < heights[right]:
                 left += 1
-            elif heights[left] > heights[right]:
-                right -= 1
             else: 
                 right -= 1
         return result
