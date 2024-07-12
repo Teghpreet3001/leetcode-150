@@ -11,7 +11,7 @@ class Solution(object):
         '''
         left = 0 
         right = len(heights) - 1
-        result = - float('inf')
+        result = 0 #lowest area can be 0
         while left < right:
             area = (right - left)*min(heights[left], heights[right])
             result = max(result, area)
