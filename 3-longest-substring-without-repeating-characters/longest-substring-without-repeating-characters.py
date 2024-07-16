@@ -6,16 +6,16 @@ class Solution(object):
         """
         left = 0
         result = 0
-
-        for right in range(len(s)):
-            for k in range(left, right):
-                if s[k] == s[right]:
-                    left = k + 1
-                    break
+        charSet =  set()
+        right = 0
+        while right < len(s):
+            while s[right] in charSet:
+                charSet.remove(s[left])
+                left += 1
+            charSet.add(s[right])
             result = max(result, right - left + 1)
-        
+            right += 1
         return result
-        
 
             
         
