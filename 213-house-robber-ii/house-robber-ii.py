@@ -1,10 +1,6 @@
-class Solution(object):
-    #Since House[1] and House[n] are adjacent, they cannot be robbed together. Therefore, the problem becomes to rob either House[1]-House[n-1] or House[2]-House[n], depending on which choice offers more money. Now the problem has degenerated to the House Robber, which is already been solved.
-    def rob(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+class Solution:
+    
+    def rob(self, nums: List[int]) -> int:
         n = len(nums)
         if len(nums) == 0:
             return 0
@@ -16,8 +12,9 @@ class Solution(object):
         backwardResult = self.robHelper(nums[1:n])
         return max(frontResult, backwardResult)
 
+    
     #Same exact code as House Robber I
-    def robHelper(self, nums):
+    def robHelper(self, nums: List[int]) -> int:
         n = len(nums)
         if len(nums) == 0:
             return 0
@@ -30,3 +27,4 @@ class Solution(object):
             dp[i] = max(nums[i] + dp[i - 2], dp[i - 1])
         print(dp)
         return dp[n - 1]
+        
