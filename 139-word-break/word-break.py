@@ -10,4 +10,5 @@ class Solution:
                 word = s[j:i]
                 if dp[j] and word in wordDict:
                     dp[i] = True
+                    break
         return dp[n]
