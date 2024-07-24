@@ -1,9 +1,6 @@
-class Solution(object):
-    def countSubstrings(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+class Solution:
+    @cache
+    def countSubstrings(self, s: str) -> int:
         #P[i][j] = whether or not i to j is a palindrome 
         P = [[False for i in range(len(s))] for j in range(len(s))]
         n = len(s)
