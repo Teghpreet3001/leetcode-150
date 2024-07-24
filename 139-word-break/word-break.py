@@ -1,7 +1,7 @@
 class Solution:
+
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         n = len(s)
-
         #dp[i] = string from 0 to i is  in wordDict
         dp = [False]*(n+1)
         dp[0] = True
