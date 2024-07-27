@@ -1,4 +1,5 @@
 class Solution:
+    @cache
     def numDecodings(self, s: str) -> int:
         #bottom up dp
         n = len(s)
@@ -20,6 +21,6 @@ class Solution:
 
             if (i + 1 < len(s)) and (s[i] == "1" or (s[i] == "2" and s[i + 1] in "0123456")):
                 dp[i] += dp[i + 2]
-                
+
         print(dp)
         return dp[0]
