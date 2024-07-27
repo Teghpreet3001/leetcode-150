@@ -1,4 +1,5 @@
 class Solution:
+    @cache
     def uniquePaths(self, m: int, n: int) -> int:
         #create dp array of size m x n
         dp = [[0]*n for i in range(m)]
