@@ -1,5 +1,5 @@
 class Solution:
-    @cache
+
     def numDecodings(self, s: str) -> int:
         #bottom up dp
         n = len(s)
