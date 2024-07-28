@@ -7,7 +7,7 @@ class Solution:
                 continue
             res = i
         return res
-        '''
+        
         # we do XOR if they are same, output is 0, if they are different, 1
         # if XOR a number with itself, we get the 0
         # if we XOR something with 0, we get the same number
@@ -22,3 +22,6 @@ class Solution:
         for num in nums:
             res = res ^ num
         return res
+        '''
+        n = len(nums)
+        return ((n*(n+1))//2) - sum(nums)
