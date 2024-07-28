@@ -1,7 +1,7 @@
 class Solution:
     # we can also do n = n & (n-1)
     # since the bits of i shift, we must store it in temp
-
+    @cache
     def countBits(self, n: int) -> List[int]:
         result = [0]*(n+1)
         result[0] = 0
