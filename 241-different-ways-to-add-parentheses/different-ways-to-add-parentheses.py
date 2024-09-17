@@ -1,8 +1,8 @@
 class Solution:
     def diffWaysToCompute(self, expression: str) -> List[int]:
-        map = {}
-        if expression in map:
-            return map[expression]
+        # map = {}
+        # if expression in map:
+        #     return map[expression]
         result = []
         for i in range(len(expression)):
             char = expression[i]
@@ -19,7 +19,7 @@ class Solution:
                             result.append(l * r)
         if len(result) == 0:
             result.append(eval(expression))
-        map[expression] = result
+        # map[expression] = result
         return result
 
                         
