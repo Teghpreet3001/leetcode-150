@@ -8,10 +8,11 @@ class Solution:
         swaps = 0
 
         def partner(person): # can also be done by person ^ 1 XOR
-            if person % 2 == 0:
-                return person + 1
-            else:
-                return person - 1
+            # if person % 2 == 0:
+            #     return person + 1
+            # else:
+            #     return person - 1
+            return person ^ 1
         
         def swap(i, j):
             temp = row[i]
