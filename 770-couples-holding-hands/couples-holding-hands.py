@@ -7,7 +7,7 @@ class Solution:
         position = {person: i for i, person in enumerate(row)}  # Map person to their position
         swaps = 0
 
-        def partner(person):
+        def partner(person): # can also be done by person ^ 1 XOR
             if person % 2 == 0:
                 return person + 1
             else:
