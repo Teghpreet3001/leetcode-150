@@ -21,11 +21,12 @@ class Solution:
                 stack.append(int(token))
                 continue
             #if token is an operator, pop the last two numbers num2 first then num1, compute and push onto stack
-            operator = token
-            num2 = stack.pop()
-            num1 = stack.pop()
-            result = self.compute(num1, num2, operator)
-            stack.append(int(result))
+            else:
+                operator = token
+                num2 = stack.pop()
+                num1 = stack.pop()
+                result = self.compute(num1, num2, operator)
+                stack.append(int(result))
         #return the last pushed result by doing return stack.pop()
         return stack.pop()
 
