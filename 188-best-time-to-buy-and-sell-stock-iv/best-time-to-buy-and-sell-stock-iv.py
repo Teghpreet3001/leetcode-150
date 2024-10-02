@@ -5,7 +5,7 @@ class Solution:
         
         n = len(prices)
         
-        # If k is larger than n//2, it becomes equivalent to an unlimited transactions problem
+        # If k is larger than n//2, it becomes equivalent to an Buy Sell 2
         if k >= n // 2:
             return self.maxProfitUnlimited(prices)
         
