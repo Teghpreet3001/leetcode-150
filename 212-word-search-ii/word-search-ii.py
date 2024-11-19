@@ -42,8 +42,8 @@ class Solution:
             self.backtrack(board, new_i, new_j, words, currNode, res)
         
         board[i][j] = letter
-        # if not currNode.children: 
-        #     startNode.children.pop(letter)
+        if not currNode.children: 
+            startNode.children.pop(letter)
 
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         res = []
